@@ -9,22 +9,49 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import mayPortrait from "@/assets/may-portrait.jpg";
 
-const CONTACT_URL = "https://tally.so/r/mVaX3Q";
+const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "May Correa — Digital Business Designer" },
+      { title: "Digital Business Designer | CRM, Course & Funnel Systems" },
       {
         name: "description",
         content:
-          "May Correa designs and builds the digital systems behind expertise-based businesses: websites, CRM and automation, courses, memberships and client journeys.",
+          "May Correa is a Digital Business Designer building online course and membership setups, CRM and automation, funnels and client journeys for coaches and consultants.",
       },
-      { property: "og:title", content: "May Correa — Digital Business Designer" },
+      {
+        property: "og:title",
+        content: "Digital Business Designer | CRM, Course & Funnel Systems",
+      },
       {
         property: "og:description",
         content:
-          "Your business shouldn't feel harder to run than it needs to. Clear, calm digital systems for coaches, educators and professional service businesses.",
+          "Online course setup, membership platforms, CRM, automation and funnels — designed and built as one calm system by May Correa.",
+      },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "May Correa — Digital Business Designer",
+          description:
+            "Digital business design: websites, CRM and automation, online course and membership systems, funnels and client journeys.",
+          areaServed: "Worldwide",
+          serviceType: [
+            "Online course setup",
+            "Membership systems",
+            "CRM setup and automation",
+            "Sales funnels",
+            "Website design",
+          ],
+        }),
       },
     ],
   }),
