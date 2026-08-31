@@ -245,7 +245,8 @@ function Home() {
           <Reveal>
             <p className="eyebrow">What I can help build</p>
             <h2 className="measure mt-6 text-3xl leading-tight sm:text-[2.6rem]">
-              Four kinds of order, built to work as one.
+              Websites, CRM and automation, courses and memberships, funnels — built to work as
+              one.
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
