@@ -86,7 +86,7 @@ export const Route = createFileRoute("/api/public/tally-webhook")({
               name,
               email: typeof email === "string" ? email : null,
               message,
-              payload: payload as unknown as Record<string, unknown>,
+              payload: JSON.parse(rawBody),
             },
             { onConflict: "external_id" },
           )
