@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "May Correa designs and builds the digital systems behind expertise-based businesses.",
       },
       { name: "author", content: "May Correa" },
+      { property: "og:site_name", content: "May Correa" },
       { property: "og:title", content: "May Correa — Digital Business Designer" },
       {
         property: "og:description",
