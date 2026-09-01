@@ -201,14 +201,14 @@ function Home() {
               </a>
             </div>
           </div>
-          <figure className="relative">
-            <div className="absolute -top-5 -left-5 hidden h-full w-full rounded-sm border border-clay/50 md:block" />
+          <figure className="relative flex items-end justify-center">
+            <div className="absolute bottom-0 left-1/2 aspect-square w-[88%] -translate-x-1/2 rounded-full bg-sand" />
             <img
-              src={mayPortrait}
-              alt="May Correa, digital business designer, working at her desk"
-              width={1024}
-              height={1280}
-              className="relative w-full rounded-sm object-cover shadow-[0_24px_60px_-40px_var(--foreground)]"
+              src={mayPortraitAsset.url}
+              alt="May Correa, digital business designer, seated with her laptop"
+              width={1350}
+              height={1900}
+              className="relative w-full max-w-md object-contain"
             />
           </figure>
         </section>
