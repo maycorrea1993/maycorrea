@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import mayPortrait from "@/assets/may-portrait.jpg";
+import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
+import logoAsset from "@/assets/may-correa-logo.png.asset.json";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
