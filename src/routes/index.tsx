@@ -148,8 +148,14 @@ function Home() {
   return (
     <div className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
-        <a href="#top" className="font-display text-lg tracking-tight text-foreground">
-          May Correa
+        <a href="#top" className="flex items-center">
+          <img
+            src={logoAsset.url}
+            alt="May Correa"
+            width={180}
+            height={100}
+            className="h-12 w-auto"
+          />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#services">
