@@ -405,7 +405,7 @@ function Home() {
       </main>
 
       <footer className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <span className="font-display text-base text-foreground">May Correa</span>
+        <img src={logoAsset.url} alt="May Correa" width={180} height={100} className="h-12 w-auto" />
         <span>Digital Business Designer — systems, quietly working.</span>
       </footer>
     </div>
