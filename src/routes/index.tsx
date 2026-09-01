@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import mayPortrait from "@/assets/may-portrait.jpg";
+import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
+import logoAsset from "@/assets/may-correa-logo.png.asset.json";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
@@ -147,8 +148,14 @@ function Home() {
   return (
     <div className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
-        <a href="#top" className="font-display text-lg tracking-tight text-foreground">
-          May Correa
+        <a href="#top" className="flex items-center">
+          <img
+            src={logoAsset.url}
+            alt="May Correa"
+            width={180}
+            height={100}
+            className="h-12 w-auto"
+          />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#services">
@@ -194,14 +201,14 @@ function Home() {
               </a>
             </div>
           </div>
-          <figure className="relative">
-            <div className="absolute -top-5 -left-5 hidden h-full w-full rounded-sm border border-clay/50 md:block" />
+          <figure className="relative flex items-end justify-center">
+            <div className="absolute bottom-0 left-1/2 aspect-square w-[88%] -translate-x-1/2 rounded-full bg-sand" />
             <img
-              src={mayPortrait}
-              alt="May Correa, digital business designer, working at her desk"
-              width={1024}
-              height={1280}
-              className="relative w-full rounded-sm object-cover shadow-[0_24px_60px_-40px_var(--foreground)]"
+              src={mayPortraitAsset.url}
+              alt="May Correa, digital business designer, seated with her laptop"
+              width={1350}
+              height={1900}
+              className="relative w-full max-w-md object-contain"
             />
           </figure>
         </section>
@@ -398,7 +405,7 @@ function Home() {
       </main>
 
       <footer className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <span className="font-display text-base text-foreground">May Correa</span>
+        <img src={logoAsset.url} alt="May Correa" width={180} height={100} className="h-12 w-auto" />
         <span>Digital Business Designer — systems, quietly working.</span>
       </footer>
     </div>
