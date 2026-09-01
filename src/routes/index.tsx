@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
 import logoAsset from "@/assets/may-correa-logo.png.asset.json";
+import { Linkedin, Facebook, Youtube } from "lucide-react";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
