@@ -42,10 +42,20 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
+          "@id": "https://maycorrea.lovable.app/#business",
           name: "May Correa — Digital Business Designer",
+          url: "https://maycorrea.lovable.app/",
+          image: "https://maycorrea.lovable.app/favicon.png",
+          logo: "https://maycorrea.lovable.app/favicon.png",
           description:
-            "Digital business design: websites, CRM and automation, online course and membership systems, funnels and client journeys.",
+            "Digital business design: websites, CRM and automation, online course and membership systems, funnels and client journeys for coaches, course creators and consultants.",
           areaServed: "Worldwide",
+          priceRange: "$$",
+          founder: { "@type": "Person", name: "May Correa" },
+          sameAs: [
+            "https://www.linkedin.com/in/maycorreadigital/",
+            "https://www.youtube.com/@MayCorrea_DigitalDesign",
+          ],
           serviceType: [
             "Online course setup",
             "Membership systems",
@@ -53,7 +63,21 @@ export const Route = createFileRoute("/")({
             "Sales funnels",
             "Website design",
           ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Digital business design services",
+            itemListElement: [
+              "Website & Digital Presence",
+              "CRM & Automation",
+              "Courses & Memberships",
+              "Funnels & Client Journeys",
+            ].map((n) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: n },
+            })),
+          },
         }),
+
       },
     ],
   }),
