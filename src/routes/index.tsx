@@ -405,9 +405,44 @@ function Home() {
         </section>
       </main>
 
-      <footer className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <img src={logoAsset.url} alt="May Correa" width={180} height={100} className="h-12 w-auto" />
-        <span>Digital Business Designer — systems, quietly working.</span>
+      <footer className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <img
+          src={logoAsset.url}
+          alt="May Correa"
+          width={180}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+        <span className="text-center sm:text-left">Digital Business Designer — systems, quietly working.</span>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/maycorreadigital/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61587399277982&mibextid=wwXIfr&rdid=oXh1cgpYFrg8bgOk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DRrZ5Mnpz%2F%3Fmibextid%3DwwXIfr#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Facebook className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.youtube.com/@MayCorrea_DigitalDesign"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Youtube className="h-5 w-5" />
+          </a>
+        </div>
       </footer>
     </div>
   );
