@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
 import logoAsset from "@/assets/may-correa-logo.png.asset.json";
@@ -150,6 +151,28 @@ const audience = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "May was wonderful to work with and I'm sad she is moving on to other projects! Her attention to detail combined with listening to instructions and carrying them out creatively made our projects effectively carry out my intentions, while adding her flavor and style. Her friendliness and willingness to communicate eased stress and made things run smoothly. I'd highly recommend her!",
+    author: "Kira S.",
+  },
+  {
+    quote: "May was amazing! She brought our ideas to life!",
+    author: "Rhys L.",
+  },
+  {
+    quote:
+      "May handled the operations side of my business wonderfully. She's been very communicative, and she's very intentional with everything she does. She's consistent and made everything easy for me to run my business.",
+    author: "Preacher F.",
+  },
+  {
+    quote:
+      "Committed to quality, clear communicator, and accountable for outcomes. We couldn't ask for a better course developer for our Montessori school.",
+    author: "Jean C.",
+  },
+];
+
 const questions = [
   {
     q: "Do I need to change all my tools?",
@@ -192,6 +215,9 @@ function Home() {
           <a className="transition-colors hover:text-foreground" href="#about">
             About
           </a>
+          <Link to="/portfolio" className="transition-colors hover:text-foreground">
+            Portfolio
+          </Link>
         </nav>
         <Button asChild variant="quiet" size="sm">
           <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
@@ -353,11 +379,56 @@ function Home() {
                 doesn't need babysitting. I care about how a system feels to the person running it
                 on a Tuesday afternoon.
               </p>
+              <p>
+                I'm an Upwork top performer specializing in digital business design, focusing on
+                GoHighLevel CRM and automation systems for coaches and educators. I've developed
+                course structures and coordinated mentorship programs to lift learner engagement and
+                support, and implemented automated client onboarding and communication systems. My
+                work centers on streamlining workflows, lead generation and educational content
+                development — course development, web design, email automation and the quiet
+                orchestration of systems that let clients succeed.
+              </p>
               <p className="font-display text-2xl leading-snug text-primary">
                 Good systems are quiet. You should notice them mostly by their absence of friction.
               </p>
             </Reveal>
           </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <Reveal>
+            <p className="eyebrow">Kind words</p>
+            <h2 className="measure mt-6 text-3xl leading-tight sm:text-[2.6rem]">
+              What it's like to work together.
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
+            {testimonials.map((t, i) => (
+              <Reveal key={t.author} delay={i * 70}>
+                <figure className="flex h-full flex-col justify-between bg-card p-9 transition-colors duration-200 hover:bg-sand/60 md:p-12">
+                  <blockquote className="leading-relaxed text-foreground/85">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-6 font-display text-lg text-primary">
+                    — {t.author}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={120}>
+            <p className="mt-10 text-sm text-muted-foreground">
+              See the work behind the words on the{" "}
+              <Link
+                to="/portfolio"
+                className="underline decoration-clay underline-offset-8 transition-colors hover:text-foreground"
+              >
+                portfolio page
+              </Link>
+              .
+            </p>
+          </Reveal>
         </section>
 
         {/* Audience */}
