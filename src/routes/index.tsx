@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
 import logoAsset from "@/assets/may-correa-logo.png.asset.json";
@@ -192,6 +193,9 @@ function Home() {
           <a className="transition-colors hover:text-foreground" href="#about">
             About
           </a>
+          <Link to="/portfolio" className="transition-colors hover:text-foreground">
+            Portfolio
+          </Link>
         </nav>
         <Button asChild variant="quiet" size="sm">
           <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
@@ -352,6 +356,15 @@ function Home() {
                 businesses: the enrolment flow, the CRM that reflects reality, the membership that
                 doesn't need babysitting. I care about how a system feels to the person running it
                 on a Tuesday afternoon.
+              </p>
+              <p>
+                I'm an Upwork top performer specializing in digital business design, focusing on
+                GoHighLevel CRM and automation systems for coaches and educators. I've developed
+                course structures and coordinated mentorship programs to lift learner engagement and
+                support, and implemented automated client onboarding and communication systems. My
+                work centers on streamlining workflows, lead generation and educational content
+                development — course development, web design, email automation and the quiet
+                orchestration of systems that let clients succeed.
               </p>
               <p className="font-display text-2xl leading-snug text-primary">
                 Good systems are quiet. You should notice them mostly by their absence of friction.
