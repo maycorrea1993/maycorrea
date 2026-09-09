@@ -142,7 +142,7 @@ const audience = [
   },
   {
     title: "Professional service businesses",
-    body: "Bringing order to CRM, onboarding and the digital face of the practice.",
+    body: "Lawyers, engineers, doctors, architects, accountants — bringing order to CRM, onboarding and the digital face of the practice.",
   },
   {
     title: "Growing expertise-based teams",
