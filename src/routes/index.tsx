@@ -9,6 +9,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
@@ -401,20 +408,29 @@ function Home() {
               What it's like to work together.
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
-            {testimonials.map((t, i) => (
-              <Reveal key={t.author} delay={i * 70}>
-                <figure className="flex h-full flex-col justify-between bg-card p-9 transition-colors duration-200 hover:bg-sand/60 md:p-12">
-                  <blockquote className="leading-relaxed text-foreground/85">
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <figcaption className="mt-6 font-display text-lg text-primary">
-                    — {t.author}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            className="mt-14 w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {testimonials.map((t) => (
+                <CarouselItem key={t.author} className="pl-4 md:basis-1/2">
+                  <figure className="flex h-full flex-col justify-between rounded-sm border border-border bg-card p-9 transition-colors duration-200 hover:bg-sand/60 md:p-12">
+                    <blockquote className="leading-relaxed text-foreground/85">
+                      &ldquo;{t.quote}&rdquo;
+                    </blockquote>
+                    <figcaption className="mt-6 font-display text-lg text-primary">
+                      — {t.author}
+                    </figcaption>
+                  </figure>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <CarouselPrevious variant="outline" size="icon" className="static translate-0" />
+              <CarouselNext variant="outline" size="icon" className="static translate-0" />
+            </div>
+          </Carousel>
           <Reveal delay={120}>
             <p className="mt-10 text-sm text-muted-foreground">
               See the work behind the words on the{" "}
