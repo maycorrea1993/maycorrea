@@ -8,8 +8,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import mayPortraitAsset from "@/assets/may-portrait.png.asset.json";
-import logoAsset from "@/assets/may-correa-logo.png.asset.json";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
@@ -198,7 +196,7 @@ function Home() {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
         <a href="#top" className="flex items-center">
           <img
-            src={logoAsset.url}
+            src={"/may-correa-logo.png"}
             alt="May Correa"
             width={180}
             height={100}
@@ -255,7 +253,7 @@ function Home() {
           <figure className="relative flex items-end justify-center">
             <div className="absolute bottom-0 left-1/2 aspect-square w-[88%] -translate-x-1/2 rounded-full bg-sand" />
             <img
-              src={mayPortraitAsset.url}
+              src={"/may-portrait.png"}
               alt="May Correa, digital business designer, seated with her laptop"
               width={1350}
               height={1900}
@@ -502,7 +500,7 @@ function Home() {
 
       <footer className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <img
-          src={logoAsset.url}
+          src={"/may-correa-logo.png"}
           alt="May Correa"
           width={180}
           height={100}
