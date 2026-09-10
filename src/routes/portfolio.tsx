@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import logoAsset from "@/assets/may-correa-logo.png.asset.json";
 import courseMigrationAsset from "@/assets/course-migration-portfolio.pdf.asset.json";
 import kajabiSetupAsset from "@/assets/kajabi-course-setup-portfolio.pdf.asset.json";
 import montessoriAsset from "@/assets/montessori-school-portfolio.pdf.asset.json";
@@ -114,7 +113,7 @@ function Portfolio() {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
         <Link to="/" className="flex items-center" aria-label="Back to home">
           <img
-            src={logoAsset.url}
+            src={"/may-correa-logo.png"}
             alt="May Correa"
             width={180}
             height={100}
@@ -209,7 +208,7 @@ function Portfolio() {
 
       <footer className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 text-sm text-muted-foreground sm:flex-row sm:justify-between">
         <img
-          src={logoAsset.url}
+          src={"/may-correa-logo.png"}
           alt="May Correa"
           width={180}
           height={100}
