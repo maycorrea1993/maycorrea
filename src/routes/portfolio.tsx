@@ -113,7 +113,7 @@ function Portfolio() {
             alt="May Correa"
             width={180}
             height={100}
-            className="h-12 w-auto"
+            className="h-36 w-auto"
           />
         </Link>
         <Button asChild variant="quiet" size="sm">
@@ -208,7 +208,7 @@ function Portfolio() {
           alt="May Correa"
           width={180}
           height={100}
-          className="h-12 w-auto object-contain"
+          className="h-36 w-auto object-contain"
         />
         <span className="text-center sm:text-left">
           Digital Business Designer — systems, quietly working.
