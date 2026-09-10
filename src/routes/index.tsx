@@ -8,14 +8,60 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import { Linkedin, Facebook, Youtube } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Linkedin, Facebook, Youtube, ArrowLeft, ArrowRight } from "lucide-react";
+import { useRef } from "react";
+
+function TestimonialCarousel() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scrollBy = (dir: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: "smooth" });
+  };
+
+  return (
+    <div className="mt-14 w-full">
+      <div
+        ref={trackRef}
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {testimonials.map((t) => (
+          <figure
+            key={t.author}
+            className="flex min-w-0 shrink-0 basis-full snap-start flex-col justify-between rounded-sm border border-border bg-card p-9 transition-colors duration-200 hover:bg-sand/60 md:basis-[calc(50%-0.5rem)] md:p-12"
+          >
+            <blockquote className="leading-relaxed text-foreground/85">
+              &ldquo;{t.quote}&rdquo;
+            </blockquote>
+            <figcaption className="mt-6 font-display text-lg text-primary">
+              — {t.author}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <Button
+          variant="outline"
+          size="icon"
+          aria-label="Previous testimonial"
+          onClick={() => scrollBy(-1)}
+        >
+          <ArrowLeft className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          aria-label="Next testimonial"
+          onClick={() => scrollBy(1)}
+        >
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
