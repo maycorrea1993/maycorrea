@@ -48,7 +48,7 @@ const cases = [
       "Lead qualification, appointment reminders and stage-progression workflows",
       "Booking funnel integrated directly with the CRM",
     ],
-    pdf: crmAsset.url,
+    pdf: "/crm-automation-portfolio.pdf",
     pdfLabel: "Download case study (PDF)",
   },
   {
@@ -65,7 +65,7 @@ const cases = [
       "Initial Skool community configuration and classroom structure",
       "Student journey reviewed across both platforms",
     ],
-    pdf: courseMigrationAsset.url,
+    pdf: "/course-migration-portfolio.pdf",
     pdfLabel: "Download case study (PDF)",
   },
   {
@@ -81,7 +81,7 @@ const cases = [
       "Course outline configured with published lessons",
       "Learning navigation set up for a clear student experience",
     ],
-    pdf: kajabiSetupAsset.url,
+    pdf: "/kajabi-course-setup-portfolio.pdf",
     pdfLabel: "Download case study (PDF)",
   },
   {
@@ -98,7 +98,7 @@ const cases = [
       "Multimedia production coordinated; branded thumbnails designed",
       "A scalable platform the school can grow into",
     ],
-    pdf: montessoriAsset.url,
+    pdf: "/montessori-school-portfolio.pdf",
     pdfLabel: "Download case study (PDF)",
   },
 ];
