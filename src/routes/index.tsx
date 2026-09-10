@@ -9,6 +9,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { Linkedin, Facebook, Youtube } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
 
