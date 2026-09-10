@@ -200,7 +200,7 @@ function Home() {
             alt="May Correa"
             width={180}
             height={100}
-            className="h-12 w-auto"
+            className="h-36 w-auto"
           />
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
@@ -504,7 +504,7 @@ function Home() {
           alt="May Correa"
           width={180}
           height={100}
-          className="h-12 w-auto object-contain"
+          className="h-36 w-auto object-contain"
         />
         <span className="text-center sm:text-left">Digital Business Designer — systems, quietly working.</span>
         <div className="flex items-center gap-4">
