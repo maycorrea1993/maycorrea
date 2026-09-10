@@ -1,10 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import courseMigrationAsset from "@/assets/course-migration-portfolio.pdf.asset.json";
-import kajabiSetupAsset from "@/assets/kajabi-course-setup-portfolio.pdf.asset.json";
-import montessoriAsset from "@/assets/montessori-school-portfolio.pdf.asset.json";
-import crmAsset from "@/assets/crm-automation-portfolio.pdf.asset.json";
 import { ArrowLeft, FileDown } from "lucide-react";
 
 const CONTACT_URL = "https://tally.so/r/VL60Rv";
